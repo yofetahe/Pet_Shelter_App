@@ -1,0 +1,36 @@
+<h3>
+  <i> Detail About {{pet.name}} </i>
+</h3>
+
+<div class="pet-detail">
+  <div> <b>Pet type:</b> {{pet.type}} </div>
+  <br>
+  <div> <b>Description:</b> {{pet.description}} </div>
+  <br>
+  <div> <b>Skills:</b> {{pet.skill_one}} <br> {{pet.skill_two}} <br> {{pet.skill_three}} </div>
+  <br>
+  <div> <b>Likes:</b> {{pet.likes}} </div>
+</div>
+<br>
+<div class="likeButton">
+  <div *ngIf="likeButtonActive">
+    <button class="waves-effect waves-light btn" (click)="likePet()">
+      Like this Pet</button>
+  </div>
+  <div *ngIf="likeButtonInactive">
+      <button class="waves-effect waves-light btn" 
+          style="background-color: silver">
+            Like this Pet
+      </button> 
+  </div>
+</div>&nbsp; &nbsp;
+<button class="waves-effect waves-light btn" (click)="likePet()" 
+  *ngIf="likeButton">
+    Like this Pet
+</button> &nbsp; &nbsp;
+<button class="waves-effect waves-light btn" (click)="deletePetInfo()">
+  Adopt this Pet!
+</button> &nbsp; &nbsp;
+<button class="waves-effect waves-light btn" [routerLink]="['/pets']">
+  Cancel
+</button>

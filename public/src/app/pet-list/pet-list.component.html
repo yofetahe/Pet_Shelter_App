@@ -1,0 +1,23 @@
+<h3><i> These pets are looking for a home!</i></h3>
+
+<button  class="waves-effect waves-light btn" [routerLink]="['/pets/new']">Add a pet to the shelter</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pet of updatedPets">
+      <td>{{pet.name}}</td>
+      <td>{{pet.type}}</td>
+      <td>
+          <button  class="waves-effect waves-light btn" [routerLink]="['/pets/', pet._id]">Details</button> &nbsp; &nbsp;
+          <button  class="waves-effect waves-light btn" (click)="getEditForm(pet._id)">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+.wrapper{
+    margin: auto;
+    width: 40%;
+    margin-top: 40px;
+}
+
+.pageNotFound{
+    border: 3px solid teal;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<h3>
+  <i> Know of a pet needing a home? </i>
+</h3>
+
+<div class="errorMessage">{{validationMessage}}</div>
+
+<form method="POST">    
+    <label for="">Pet name:</label>
+    <div class="errorMessage">{{errors.name}}</div>
+    <input type="text" [(ngModel)]="pet.name" name="pet.name" >
+
+    <label for="">Pet type:</label>
+    <div class="errorMessage">{{errors.type}}</div>
+    <input type="text" [(ngModel)]="pet.type" name="pet.type" >
+
+    <label for="">Description:</label>
+    <div class="errorMessage">{{errors.description}}</div>
+    <input type="text" [(ngModel)]="pet.description" name="pet.description" >
+
+    <label for="">Skills:</label>
+    <div class="skill-form">
+        <label for="">Skill 1:</label>
+        <input type="text" [(ngModel)]="pet.skill_one" name="pet.skill_one" >
+    
+        <label for="">Skill 2:</label>
+        <input type="text" [(ngModel)]="pet.skill_two" name="pet.skill_two" >
+    
+        <label for="">Skill 3:</label>
+        <input type="text" [(ngModel)]="pet.skill_three" name="pet.skill_three" >
+    </div>
+
+    <button class="waves-effect waves-light btn" (click)="validatePetInfo()">Add Pet</button> &nbsp; &nbsp;
+    <button class="waves-effect waves-light btn" [routerLink]="['/pets']">Cancel</button> 
+    
+  </form>
+
